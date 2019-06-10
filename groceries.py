@@ -3,6 +3,9 @@
 
 from pprint import pprint
 
+def to_usd(my_price):
+    return "${0:,.2f}".format(my_price)
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -43,4 +46,10 @@ print("--------------")
 for item in products:
     #print(type(item))
     #print(p["name"])
-    print(item["name"])
+    #print(item["name"])
+    #n = item["name"]
+    #price = item["price"]
+    #print(f"{item['name']} ... {item['price']}")
+
+    price_usd = to_usd(item['price'])
+    print(f"{item['name']} ... {price_usd}")
