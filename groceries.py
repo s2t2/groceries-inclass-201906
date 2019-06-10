@@ -37,3 +37,10 @@ products_count = len(products)
 print("--------------")
 print(f"THERE ARE {products_count} PRODUCTS:")
 print("--------------")
+
+# todo: sort the products
+
+for item in products:
+    #print(type(item))
+    #print(p["name"])
+    print(item["name"])
